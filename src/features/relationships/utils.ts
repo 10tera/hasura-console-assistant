@@ -1,5 +1,5 @@
 // URLからスキーマ名とデータソース名を抽出
-export function extractUrlInfo(): { dataSource: string; schema: string } | null {
+export const extractUrlInfo = (): { dataSource: string; schema: string } | null => {
   const urlMatch = window.location.pathname.match(/\/console\/data\/([^\/]+)\/schema\/([^\/]+)/);
 
   if (urlMatch) {
@@ -10,4 +10,4 @@ export function extractUrlInfo(): { dataSource: string; schema: string } | null 
   }
 
   return null;
-}
+};
