@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Hasura Console Assistant",
+  "version": "1.0.0",
+  "description": "Enhances Hasura Console by making relationship table names clickable",
+  "permissions": [],
+  "host_permissions": [
+    "https://*/console/*",
+    "http://*/console/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/console/*",
+        "http://*/console/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
+
