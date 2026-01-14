@@ -1,4 +1,3 @@
-import type React from 'react';
 import { extractUrlInfo } from './utils';
 
 interface TableLinkProps {
@@ -6,7 +5,7 @@ interface TableLinkProps {
   originalText: string;
 }
 
-export const TableLink: React.FC<TableLinkProps> = ({ tableName, originalText }) => {
+export const TableLink = ({ tableName, originalText }: TableLinkProps) => {
   const urlInfo = extractUrlInfo();
   if (!urlInfo) {
     // URLが取得できない場合はテキストのまま返す
