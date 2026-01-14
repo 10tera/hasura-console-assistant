@@ -3,20 +3,14 @@
   "name": "Hasura Console Assistant",
   "version": "1.0.0",
   "description": "Enhances Hasura Console by making relationship table names clickable",
+  "author": "Yuto Tanimura",
   "permissions": [],
-  "host_permissions": [
-    "https://*/console/*",
-    "http://*/console/*"
-  ],
+  "host_permissions": ["https://*/console/*", "http://*/console/*"],
   "content_scripts": [
     {
-      "matches": [
-        "https://*/console/*",
-        "http://*/console/*"
-      ],
+      "matches": ["https://*/console/*", "http://*/console/*"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
   ]
 }
-

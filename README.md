@@ -122,4 +122,8 @@ hasura-console-assistant/
 
 ## ライセンス
 
-MIT
+MIT License
+
+Copyright (c) 2026 Yuto Tanimura
+
+詳細は[LICENSE](LICENSE)ファイルをご覧ください。
