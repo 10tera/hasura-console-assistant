@@ -1,10 +1,18 @@
 # Hasura Console Assistant
 
-Chrome拡張機能で、Hasura ConsoleのRelationshipsタブを強化します。リレーション先のテーブル名を自動的にクリック可能なリンクに変換し、そのテーブルのデータブラウザページへ直接遷移できるようにします。
+Chrome拡張機能で、Hasura Consoleの作業効率を向上させます。Relationshipsタブでのテーブル名リンク化や、relationship名の自動提案など、便利な機能を提供します。
 
 ## 機能
 
+### 1. Relationships Linker
 - **自動リンク変換**: Relationshipsタブ内のテーブル名を自動検出してリンク化
+- **直接遷移**: クリックで対象テーブルのデータブラウザページへ即座に移動
+- **新しいタブで開く**: 別タブで開くため、現在の作業を中断しない
+
+### 2. Relationship Name Suggester
+- **自動名前提案**: Create Relationshipダイアログで、テーブル名とRelationship Typeに基づいて適切なrelationship名を自動提案
+- **英語の複数形ルール対応**: object型ではそのまま、array型では複数形に変換（例: `category` → `categories`）
+- **ワンクリック入力**: "Suggest Name"ボタンをクリックするだけで自動入力
 
 ## 技術スタック
 
@@ -37,6 +45,7 @@ pnpm run build
 4. プロジェクトの `dist/` フォルダを選択
 
 ### 4. 使用方法
+
 #### Relationships Linker
 1. Hasura Consoleを開く
 2. データベーステーブルのRelationshipsタブに移動
@@ -46,6 +55,18 @@ pnpm run build
 **注意**: 
 - リンクをクリックした際に再ログインを求められる場合は、Hasuraのパスワード保存ボタンを押してログインしてください。これにより、今後スムーズにページ遷移できるようになります。
 - 外部テーブルとのrelationshipについては、リンクは生成されません。
+
+#### Relationship Name Suggester
+1. Hasura Consoleを開く
+2. データベーステーブルのRelationshipsタブに移動
+3. "Add relationship"ボタンをクリック
+4. Create Relationshipダイアログで"To Reference"を選択
+5. Relationship Typeの隣に表示される"Suggest Name"ボタンをクリック
+6. Relationship Name入力欄に適切な名前が自動入力される
+
+**提案ルール**:
+- **Object型**: テーブル名をそのまま使用（例: `user` → `user`）
+- **Array型**: テーブル名を複数形に変換（例: `user` → `users`, `category` → `categories`）
 
 
 ## 開発
