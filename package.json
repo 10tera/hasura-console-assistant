@@ -1,6 +1,6 @@
 {
   "name": "hasura-console-assistant",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Chrome extension to enhance Hasura Console with clickable relationship table names",
   "type": "module",
   "license": "MIT",
